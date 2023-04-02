@@ -6,10 +6,8 @@ const app = express();
 const port = 8000;
 
 var studentsList = [];
-// Tell Express to use EJS as the view engine
 app.set("view engine", "ejs");
 
-// Parse request body as JSON
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(bodyParser.json());
