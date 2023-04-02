@@ -1,9 +1,12 @@
 body {
     margin: 0;
     padding: 0;
+    color: #f2aa4cff;
+    background-color: #101820ff;
+    font-family: "Major Mono Display", monospace;
 }
 .sidebar {
-    background-color: #f1f1f1;
+    background-color: rgb(7, 9, 11);
     height: 100%;
     width: 200px;
     position: fixed;
@@ -11,22 +14,32 @@ body {
     left: 0;
     padding-top: 20px;
 }
-body {
-    font-family: "Gill-Sans", sans-serif;
+
+.sidebar a:hover {
+    background-color: #1d4ed8;
+    color: white;
 }
 .sidebar a {
     display: block;
-    color: #000;
+    color: #a7b7eb;
     padding: 8px 16px;
     text-decoration: none;
 }
-.sidebar a:hover {
-    background-color: #ddd;
+.sidebar a:hover:not(.active) {
+    background-color: #96bdd2;
+    color: #100338;
 }
 .main {
     margin-left: 200px;
     padding: 20px;
     font-size: 20px;
+}
+li {
+    display: inline-block;
+}
+
+button {
+    display: inline-block;
 }
 
 ul {
