@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Marks</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <div class="sidebar">
+            <a href="/">Dashboard</a>
+            <a href="/addStudents"  id="addStudentLink">Add Student</a>
+            <a href="/assignMarks">Assign Marks to Student</a>
+            <a href="/saveMarks">View Marks</a>
+        </div>
+
+        <div class="main">
+            <h1>Students added to team -> </h1>
+            <ul class="disabler">
+                <% for(var i = 0; i<listItem.length; i++){ %>
+                        <li><%= listItem[i] %></li>
+                        <button onclick = "removeStudents('<%= listItem[i] %>')"> Remove </button>
+                        <hr></hr>
+                        <form onsubmit="submitForm(event, '<%= listItem[i] %>')">
+                            <label for="marks1">Marks 1:</label>
+                            <input type="marks1" id="marks1" name="marks1" required />
+                            <label for="marks2">Marks 2:</label>
+                            <input type="marks2" id="marks2" name="marks2" required />
+                            <label for="marks3">Marks 3:</label>
+                            <input type="marks3" id="marks3" name="marks3" required />            
+                            <input type="submit" value="Submit" />
+                            
+                        </form>
+                <% } %>
+            </ul>
+
+            <button type="submit" id="finalSubmitBtn" onclick="disableInputs()">Final Submit</button>
+
+        </div>
+        <script src="script/scripts.js"></script>
+    </body>
+</html>

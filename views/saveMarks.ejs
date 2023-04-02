@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Marks</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <div class="sidebar">
+            <a href="/">Dashboard</a>
+            <a href="/addStudents">Add Student</a>
+            <a href="/assignMarks">Assign Marks to Student</a>
+            <a href="/saveMarks">View Marks</a>
+        </div>
+
+        <div class="main">
+            <h1>View Marks</h1>
+            <form action ="/saveMarks" method = "POST">
+                <label for="filter">Filter:</label>
+                <select id="filter" name="filter">
+                    <option value="all">All</option>
+                    <option value="unassigned">Unassigned</option>
+                    <option value="assigned">Assigned</option>
+                </select>
+                <button type="submit" value="Filter"> Show </button>
+            </form>
+        
+            <table>
+                <tr>
+                  <th>Name</th>
+                  <th>viva</th>
+                  <th>Execution</th>
+                  <th>Ideation</th>
+                </tr>
+                <% for(var i = 0; i<name.length; i++){ %>   
+                    <tr>
+                        <td><%= name[i] %></td>
+                        <td><%= mar1[i] %></td>
+                        <td><%= mar2[i] %></td>
+                        <td><%= mar3[i] %></td>
+                      </tr>
+                <% } %>
+                
+            </table>
+    </div>
+    </body>
+</html>
+
+

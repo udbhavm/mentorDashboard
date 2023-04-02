@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Marks</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <div class="sidebar">
+            <a href="/">Dashboard</a>
+            <a href="/addStudents">Add Student</a>
+            <a href="/assignMarks">Assign Marks to Student</a>
+            <a href="/saveMarks">View Marks</a>
+        </div>
+        <div class="main">
+            <h1>Add Student</h1>
+            <ul>
+                <% for(var i = 0; i<listItem.length; i++){ %>
+                        <li> <%= listItem[i] %></li>
+                        <button onclick = "addStudents('<%= listItem[i] %>')"> Add </button>
+                        <h1></h1>
+                <% } %>
+            </ul>
+        </div>
+        <script src="script/scripts.js"></script>
+    </body>
+</html>
